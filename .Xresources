@@ -1,0 +1,31 @@
+#include "/home/shaybox/.config/schemegen/configs/Xresources"
+! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
+! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
+! vim: ft=xdefaults
+
+*background: bg
+*foreground: fg
+! black
+*color0: black
+*color8: lightgray
+! red
+*color1: red
+*color9: lightred
+! green
+*color2: green
+*color10: lightgreen
+! yellow
+*color3: yellow
+*color11: lightyellow
+! blue
+*color4: blue
+*color12: lightblue
+! magenta
+*color5: magenta
+*color13: lightmagenta
+! cyan
+*color6: cyan
+*color14: lightcyan
+! white
+*color7: lightgray
+*color15: white

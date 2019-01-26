@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ESP_ID=ata-WDC_WDS500G2B0B-00YS70_182364800944-part4
+
+if [[ $1 == Win10* ]]
+then
+	if [[ $2 == "start" ]]
+	then
+		umount /dev/disk/by-id/$ESP_ID
+	elif [[ $2 == "stopped" ]]
+	then
+		mount /dev/disk/by-id/$ESP_ID
+	fi
+fi
