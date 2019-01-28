@@ -76,6 +76,7 @@ alias ls=exa
 
 # SSH shortcuts
 alias bots="ssh shay@bots"
+alias server="ssh root@server"
 
 # Bandwidth monitor
 alias bw="nload enp8s0"

@@ -2,10 +2,10 @@ Print
 	flameshot gui
 
 super + Return
-	st
+	rofi-sensible-terminal
 
 super + d
-	j4-dmenu-desktop
+	rofi -show drun
 
 # Reload SXHKD
 super + Escape

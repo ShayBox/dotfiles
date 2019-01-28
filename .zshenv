@@ -16,3 +16,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Disable root messages
 export ZSH_DISABLE_COMPFIX=true
+
+# XDG
+export XDG_DATA_HOME=$HOME/.config
