@@ -2,7 +2,7 @@ Print
 	flameshot gui
 
 super + Return
-	rofi-sensible-terminal
+	urxvtc
 
 super + d
 	rofi -show drun

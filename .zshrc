@@ -81,9 +81,6 @@ alias server="ssh root@server"
 # Bandwidth monitor
 alias bw="nload enp8s0"
 
-# Send to clipboard
-alias xclip="xclip -selection c"
-
 # Games
 alias 2048="ssh play@ascii.town"
 alias tron="ssh sshtron.zachlatta.com"
@@ -104,6 +101,9 @@ alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
 
 # dotfiles
 alias dotfiles="git --git-dir=$HOME/Documents/Workspace/dotfiles/ --work-tree=$HOME"
+
+# Xresources
+alias xresources="nano ~/.Xresources && xrdb -merge ~/.Xresources"
 
 # Convert to davinci-resolve compatable file
 rconvert() {

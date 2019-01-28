@@ -1,13 +1,30 @@
-! Terminal: urxvt
-urxvt*font: xft:Inconsolata\ for\ Powerline:size=14
+! XFT
 
-! Fonts
-!Xft.dpi:        100
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.autohint:   true
-Xft.hintstyle:  hintfull   
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+! URXVT
+
+urxvt*font: xft:Inconsolata:pixelsize=14,xft:Inconsolata for Powerline:pixelsize=14
+urxvt*letterSpace: -1
+urxvt.lineSpace: 0
+urxvt.depth: 32
+urxvt*scrollBar: false
+!urxvt.geometry: 90x30
+!urxvt.internalBorder: 3
+!urxvt*transparent: true
+
+urxvt.iso14755: false
+urxvt.iso14755_52: false
+
+urxvt.perl-ext-common: ibeamcursor,clipboard
+urxvt.keysym.Shift-Control-V: perl:clipboard:paste
+urxvt.keysym.Shift-Control-C: perl:clipboard:copy
+
+! COLORS
 
 ! special
 *.foreground:   #f8f8f8
@@ -45,4 +62,3 @@ Xft.hintstyle:  hintfull
 ! white
 *.color7:       #ebebeb
 *.color15:      #f8f8f8
-

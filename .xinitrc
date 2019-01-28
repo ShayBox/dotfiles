@@ -11,5 +11,6 @@ xsetroot -cursor_name left_ptr
 nvidia-settings --load-config-only
 g910-led -a 0000FF
 g910-led -gkm 1
+urxvtd &
 
 exec dbus-launch bspwm
