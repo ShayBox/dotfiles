@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
 
 # Replace ls
-alias ls=exa
+#alias ls=exa
 
 # SSH shortcuts
 alias bots="ssh shay@bots"
@@ -112,17 +112,14 @@ alias st-config="sudo nano /etc/portage/savedconfig/x11-terms/st-0.8.1 && sudo e
 alias dmenu-config="sudo nano /etc/portage/savedconfig/x11-misc/dmenu-4.8 && sudo emerge dmenu"
 alias dwm-config="sudo nano /etc/portage/savedconfig/x11-wm/dwm-6.1-r1 && sudo emerge dwm"
 
-# Visual Studio Code
-alias code=vscode
+# Kernel
+alias kernel="sudo genkernel all --menuconfig"
 
 ## End Gentoo
 ## Arch
 
 # Make .SRCINFO
 alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
-
-# Visual Studio Code
-alias vscode=code
 
 ## End Arch
 
