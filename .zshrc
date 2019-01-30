@@ -68,6 +68,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+## General
+
 # Autocomplete command flags
 autoload -U compinit && compinit
 
@@ -81,13 +83,8 @@ alias server="ssh root@server"
 # Bandwidth monitor
 alias bw="nload enp8s0"
 
-# Games
-alias 2048="ssh play@ascii.town"
-alias tron="ssh sshtron.zachlatta.com"
-
-# VPNs & Proxies
+# Proxy
 alias proxy="sshuttle --dns -r shay@bots 0/0"
-alias vpn=windscribe
 
 # Random wallpaper
 alias wallpaper="feh --bg-scale --randomize ~/Pictures/Wallpapers/All/*"
@@ -96,19 +93,38 @@ alias wallpaper="feh --bg-scale --randomize ~/Pictures/Wallpapers/All/*"
 alias win="su root -c '~/.scripts/unbind.sh &'"
 alias win2="su root -c '~/.scripts/unbind2.sh &'"
 
-# Make .SRCINFO
-alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
-
 # dotfiles
 alias dotfiles="git --git-dir=$HOME/Documents/Workspace/dotfiles/ --work-tree=$HOME"
 
-# Xresources
-alias xresources="nano ~/.Xresources && xrdb -merge ~/.Xresources"
+# Xdefaults
+alias xdefaults="nano ~/.Xdefaults && xrdb -merge ~/.Xdefaults"
 
 # Convert to davinci-resolve compatable file
 rconvert() {
 	ffmpeg-bar -y -i "$1" -c:v libxvid -c:v mpeg4 -force_key_frames "expr:gte(t,n_forced*1)" -b:v 250000k -c:a pcm_s16le "${1%%.*}.mov"
 }
 
-# Show neofetch
+## End General
+## Gentoo
+
+# Suckless configs
+alias st-config="sudo nano /etc/portage/savedconfig/x11-terms/st-0.8.1 && sudo emerge st"
+alias dmenu-config="sudo nano /etc/portage/savedconfig/x11-misc/dmenu-4.8 && sudo emerge dmenu"
+alias dwm-config="sudo nano /etc/portage/savedconfig/x11-wm/dwm-6.1-r1 && sudo emerge dwm"
+
+# Visual Studio Code
+alias code=vscode
+
+## End Gentoo
+## Arch
+
+# Make .SRCINFO
+alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
+
+# Visual Studio Code
+alias vscode=code
+
+## End Arch
+
 neofetch
+ls

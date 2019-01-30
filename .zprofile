@@ -1,3 +1,1 @@
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 && ! -e /tmp/DISABLE_STARTX ]]; then
-  exec startx
-fi
+[[ -z $DISPLAY && $TTY = "/dev/tty1" ]] && exec startx

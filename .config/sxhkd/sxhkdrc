@@ -2,10 +2,10 @@ Print
 	flameshot gui
 
 super + Return
-	urxvtc
+	st
 
 super + d
-	rofi -show drun
+	j4-dmenu-desktop
 
 # Reload SXHKD
 super + Escape

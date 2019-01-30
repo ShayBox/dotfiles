@@ -309,7 +309,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 ;   modules-left = cpu ram
 ;   modules-center = xwindow xbacklight
 ;   modules-right = ipc clock
-modules-left = bspwm windscribe
+modules-left = bspwm
 modules-center = date
 modules-right = 
 
@@ -962,13 +962,3 @@ exec = node ~/.config/polybar/scripts/subscriber.js
 type = custom/script
 interval = 1
 exec = node ~/.config/polybar/scripts/energy.js
-
-;__        ___           _               _ _          
-;\ \      / (_)_ __   __| |___  ___ _ __(_) |__   ___ 
-; \ \ /\ / /| | '_ \ / _` / __|/ __| '__| | '_ \ / _ \
-;  \ V  V / | | | | | (_| \__ \ (__| |  | | |_) |  __/
-;   \_/\_/  |_|_| |_|\__,_|___/\___|_|  |_|_.__/ \___|                                                    
-[module/windscribe]
-type = custom/script
-interval = 15
-exec = node ~/.config/polybar/scripts/windscribe.js
