@@ -2,7 +2,7 @@
 
 ESP_ID=ata-WDC_WDS500G2B0B-00YS70_182364800944-part4
 
-if [[ $1 == Win10* ]]
+if [[ $1 == "Win10-GPU" || $1 == "Win10-QXL" ]]
 then
 	if [[ $2 == "start" ]]
 	then
