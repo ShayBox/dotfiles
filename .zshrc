@@ -74,11 +74,13 @@ source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
 
 # Replace ls
-#alias ls=exa
+alias ls=exa
 
 # SSH shortcuts
 alias bots="ssh shay@bots"
-alias server="ssh root@server"
+alias xserver="ssh -X shaybox@server"
+alias server="ssh shaybox@server"
+alias vnc="sh -c 'Xephyr -query 192.168.0.100 -screen 1920x1080 -br -reset -terminate :1 &' && exit"
 
 # Bandwidth monitor
 alias bw="nload enp8s0"
@@ -87,11 +89,11 @@ alias bw="nload enp8s0"
 alias proxy="sshuttle --dns -r shay@bots 0/0"
 
 # Random wallpaper
-alias wallpaper="feh --bg-scale --randomize ~/Pictures/Wallpapers/All/*"
+alias wallpaper="feh --bg-scale --randomize ~/Pictures/Wallpapers/Misc/*"
 
 # VMs
-alias win="su root -c '~/.scripts/unbind.sh &'"
-alias win2="su root -c '~/.scripts/unbind2.sh &'"
+alias win10="su root -c '/home/shaybox/.scripts/unbind10.sh &'"
+alias win7="su root -c '/home/shaybox/.scripts/unbind7.sh &'"
 
 # dotfiles
 alias dotfiles="git --git-dir=$HOME/Documents/Workspace/dotfiles/ --work-tree=$HOME"
@@ -105,17 +107,6 @@ rconvert() {
 }
 
 ## End General
-## Gentoo
-
-# Suckless configs
-alias st-config="sudo nano /etc/portage/savedconfig/x11-terms/st-0.8.1 && sudo emerge st"
-alias dmenu-config="sudo nano /etc/portage/savedconfig/x11-misc/dmenu-4.8 && sudo emerge dmenu"
-alias dwm-config="sudo nano /etc/portage/savedconfig/x11-wm/dwm-6.1-r1 && sudo emerge dwm"
-
-# Kernel
-alias kernel="sudo genkernel all --menuconfig"
-
-## End Gentoo
 ## Arch
 
 # Make .SRCINFO

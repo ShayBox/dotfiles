@@ -19,3 +19,6 @@ export ZSH_DISABLE_COMPFIX=true
 
 # XDG
 export XDG_DATA_HOME=$HOME/.config
+
+# Disable Telemetry
+export DOTNET_CLI_TELEMETRY_OPTOUT=1

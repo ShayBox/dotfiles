@@ -19,5 +19,5 @@ const params = new URLSearchParams({
 		.then(json => json.items[0].statistics.subscriberCount)
 		.catch(() => 0);
 
-	console.log(` ${(pewdiepie - tseries).toLocaleString()}`);
+	console.log((pewdiepie - tseries).toLocaleString());
 })();

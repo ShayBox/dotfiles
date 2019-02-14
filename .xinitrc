@@ -1,6 +1,5 @@
 # Wallpaper
-#feh --bg-scale --randomize ~/Pictures/Wallpapers/All/*
-feh --bg-scale ~/Pictures/Wallpapers/Wallpaper.png
+feh --bg-scale --randomize ~/Pictures/Wallpapers/Misc/*
 
 # Remap Caps to F13
 xmodmap ~/.Xmodmap
@@ -12,7 +11,7 @@ compton -b
 xsetroot -cursor_name left_ptr
 
 # Load nvidia settings
-nvidia-settings --load-config-only
+#nvidia-settings --load-config-only
 
 # Set keyboard color & disable G keys
 g910-led -a 0000FF

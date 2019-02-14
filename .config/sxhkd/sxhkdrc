@@ -7,6 +7,9 @@ super + Return
 super + d
 	j4-dmenu-desktop
 
+super + ctrl + d
+	node ~/.scripts/server.js
+
 # Reload SXHKD
 super + Escape
 	pkill -USR1 -x sxhkd
