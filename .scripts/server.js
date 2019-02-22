@@ -2,7 +2,8 @@ const { execSync } = require('child_process');
 
 const applications = {
   'firefox': 'firefox --new-instance',
-  'discord': 'discord'
+  'discord': 'discord',
+  'code': 'code',
 };
 
 const selection = 

@@ -76,6 +76,10 @@ autoload -U compinit && compinit
 # Replace ls
 alias ls=exa
 
+# Editor
+alias vi="nvim"
+alias vim="nvim"
+
 # SSH shortcuts
 alias bots="ssh shay@bots"
 alias xserver="ssh -X shaybox@server"

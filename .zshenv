@@ -1,6 +1,6 @@
 # EDITOR
-export EDITOR=nano
-export VISUAL=nano
+export EDITOR=nvim
+export VISUAL=nvim
 
 # GOPATH
 export GOPATH=~/Documents/Workspace/Go
@@ -16,9 +16,3 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Disable root messages
 export ZSH_DISABLE_COMPFIX=true
-
-# XDG
-export XDG_DATA_HOME=$HOME/.config
-
-# Disable Telemetry
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
