@@ -1,0 +1,45 @@
+[options]
+font = Inconsolata 12
+
+# "block", "underline" or "ibeam"
+cursor_shape = ibeam
+
+[colors]
+
+# special
+foreground      = #f8f8f8
+foreground_bold = #f8f8f8
+cursor          = #f8f8f8
+background      = #282828
+
+# black
+color0  = #171717
+color8  = #38252c
+
+# red
+color1  = #d81765
+color9  = #ff0000
+
+# green
+color2  = #97d01a
+color10 = #76b639
+
+# yellow
+color3  = #ffa800
+color11 = #e1a126
+
+# blue
+color4  = #0fdcb6
+color12 = #0a9b81
+
+# magenta
+color5  = #ff2491
+color13 = #ff2491
+
+# cyan
+color6  = #16b1fb
+color14 = #289cd5
+
+# white
+color7  = #ebebeb
+color15 = #f8f8f8

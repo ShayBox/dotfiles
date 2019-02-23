@@ -16,3 +16,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Disable root messages
 export ZSH_DISABLE_COMPFIX=true
+
+# QT Theme
+export QT_QPA_PLATFORMTHEME=qt5ct

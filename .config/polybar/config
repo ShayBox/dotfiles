@@ -4,7 +4,7 @@
 ;| |__| (_) | | (_) | |  \__ \
 ; \____\___/|_|\___/|_|  |___/
 [colors]
-background = #171717
+background = #282828
 background-alt = #444
 foreground = #f8f8f8
 foreground-alt = #555

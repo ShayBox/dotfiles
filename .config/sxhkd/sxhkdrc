@@ -1,3 +1,11 @@
+# Browser
+super + 1
+	firefox
+
+# File Manager
+super + 2
+	dolphin
+
 # Exit WM
 ctrl + alt + Delete
 	bspc quit
@@ -8,15 +16,11 @@ Print
 
 # Terminal
 super + Return
-	st
+	rofi-sensible-terminal
 
 # Launcher
 super + d
-	j4-dmenu-desktop
-
-# Launcher - Server
-super + ctrl + d
-	node ~/.scripts/server.js
+	rofi -show drun
 
 # Reload SXHKD
 super + Escape

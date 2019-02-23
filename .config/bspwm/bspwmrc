@@ -17,13 +17,9 @@ bspc rule -a discord desktop=^7
 bspc rule -a obs desktop=^8
 bspc rule -a Flashplayer state=tiled
 
-## ENV
-# QT Theme
-export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_STYLE_OVERRIDE=kvantum
-
 ## Startup
-# Keybinds
+
+# Hotkey Daemon
 sxhkd &
 
 # Bar
@@ -38,7 +34,7 @@ xmodmap ~/.Xmodmap
 # Compositor
 compton -b
 
-# Fix Cusor
+# Fix Cusor On Desktop
 xsetroot -cursor_name left_ptr
 
 # Notifications
