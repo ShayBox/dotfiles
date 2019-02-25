@@ -1,0 +1,3 @@
+UUID=b5fd6952-1289-4326-8a76-7b252bbf3c1a	/	ext4	rw,relatime	0 1
+UUID=5981-7BC8					/boot	vfat	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=70781CC8781C8F4A				/mnt/c	ntfs-3g	defaults	0 0
