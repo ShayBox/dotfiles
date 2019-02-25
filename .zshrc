@@ -85,6 +85,7 @@ alias bots="ssh shay@bots"
 alias xserver="ssh -X shaybox@server"
 alias server="ssh shaybox@server"
 alias vnc="sh -c 'Xephyr -query 192.168.0.100 -screen 1920x1080 -br -reset -terminate :1 &' && exit"
+alias terraria="ssh shay@server.nomsy.net"
 
 # Bandwidth monitor
 alias bw="nload enp8s0"

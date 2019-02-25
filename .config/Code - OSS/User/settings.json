@@ -1,0 +1,12 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.tabSize": 2,
+    "explorer.openEditors.visible": 0,
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "workbench.list.openMode": "doubleClick",
+    "terminal.integrated.cursorStyle": "line"
+}

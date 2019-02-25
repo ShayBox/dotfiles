@@ -18,4 +18,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export ZSH_DISABLE_COMPFIX=true
 
 # QT Theme
-export QT_QPA_PLATFORMTHEME=qt5ct
+if [ ! $XDG_CURRENT_DESKTOP = "KDE" ]
+then
+	export QT_QPA_PLATFORMTHEME=qt5ct
+fi
