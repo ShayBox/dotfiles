@@ -1,5 +1,5 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "none",
     "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.tabSize": 2,
     "explorer.openEditors.visible": 0,
@@ -8,5 +8,27 @@
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "workbench.list.openMode": "doubleClick",
-    "terminal.integrated.cursorStyle": "line"
+    "terminal.integrated.cursorStyle": "line",
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDelete": false,
+    "eslint.autoFixOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true
+    },
+    "typescript.tsc.autoDetect": "off",
+    "npm.autoDetect": "off",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "typescript.extension.sortImports.enableJavascript": true,
+    "typescript.extension.sortImports.maxNamedImportsInSingleLine": 100,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "files.exclude": {
+        "**/.gitignore": true,
+        "**/LICENSE": true,
+        "**/node_modules": true
+    },
+    "window.zoomLevel": 0
 }

@@ -87,24 +87,15 @@ alias server="ssh shaybox@server"
 alias vnc="sh -c 'Xephyr -query 192.168.0.100 -screen 1920x1080 -br -reset -terminate :1 &' && exit"
 alias terraria="ssh shay@server.nomsy.net"
 
-# Bandwidth monitor
-alias bw="nload enp8s0"
-
 # Proxy
 alias proxy="sshuttle --dns -r shay@bots 0/0"
-
-# Random wallpaper
-alias wallpaper="feh --bg-scale --randomize ~/Pictures/Wallpapers/Misc/*"
 
 # VMs
 alias win10="su root -c '/home/shaybox/.scripts/unbind10.sh &'"
 alias win7="su root -c '/home/shaybox/.scripts/unbind7.sh &'"
 
 # dotfiles
-alias dotfiles="git --git-dir=$HOME/Documents/Workspace/dotfiles/ --work-tree=$HOME"
-
-# Xdefaults
-alias xdefaults="nano ~/.Xdefaults && xrdb -merge ~/.Xdefaults"
+alias dotfiles="git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME"
 
 # Convert to davinci-resolve compatable file
 rconvert() {
