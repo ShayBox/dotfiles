@@ -82,9 +82,13 @@ alias vim="nvim"
 
 # SSH shortcuts
 alias bots="ssh shay@bots"
-alias xserver="ssh -X shaybox@server"
-alias server="ssh shaybox@server"
-alias vnc="sh -c 'Xephyr -query 192.168.0.100 -screen 1920x1080 -br -reset -terminate :1 &' && exit"
+alias server="ssh server-lan"
+alias server2="ssh server-wan"
+alias xserver="ssh -X server-lan"
+alias xserver2="ssh -X server-wan"
+alias xdmcp="sh -c 'Xephyr -query server-lan -screen 1920x1021 -br -reset -terminate :1 &' && exit"
+alias xdmcp2="sh -c 'Xephyr -query server-wan -screen 1920x1021 -br -reset -terminate :1 &' && exit"
+alias pi="ssh pi@pi"
 alias terraria="ssh shay@server.nomsy.net"
 
 # Proxy

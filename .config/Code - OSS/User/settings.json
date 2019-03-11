@@ -3,8 +3,7 @@
     "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.tabSize": 2,
     "explorer.openEditors.visible": 0,
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
-    "editor.fontSize": 16,
+    "workbench.colorTheme": "FlatUI Dark",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "workbench.list.openMode": "doubleClick",
@@ -26,9 +25,12 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "files.exclude": {
+        "**/.directory": true,
         "**/.gitignore": true,
         "**/LICENSE": true,
         "**/node_modules": true
     },
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "editor.fontSize": 16,
+    "window.menuBarVisibility": "default"
 }
