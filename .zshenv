@@ -1,3 +1,7 @@
+# Editor
+export EDITOR=nano
+export VISUAL=nano
+
 # GOPATH
 export GOPATH=~/Documents/Workspace/Go
 

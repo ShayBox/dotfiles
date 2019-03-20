@@ -82,21 +82,22 @@ alias vim="nvim"
 
 # SSH shortcuts
 alias bots="ssh shay@bots"
-alias server="ssh server-lan"
-alias server2="ssh server-wan"
-alias xserver="ssh -X server-lan"
-alias xserver2="ssh -X server-wan"
-alias xdmcp="sh -c 'Xephyr -query server-lan -screen 1920x1021 -br -reset -terminate :1 &' && exit"
-alias xdmcp2="sh -c 'Xephyr -query server-wan -screen 1920x1021 -br -reset -terminate :1 &' && exit"
+alias server="ssh server"
+alias xserver="ssh -X server"
+alias xdmcp="sh -c 'Xephyr -query server -screen 1920x1021 -br -reset -terminate :1 &' && exit"
 alias pi="ssh pi@pi"
 alias terraria="ssh shay@server.nomsy.net"
+
+# Flipping
+alias flipping="./.scripts/flipping.sh"
 
 # Proxy
 alias proxy="sshuttle --dns -r shay@bots 0/0"
 
 # VMs
-alias win10="su root -c '/home/shaybox/.scripts/unbind10.sh &'"
-alias win7="su root -c '/home/shaybox/.scripts/unbind7.sh &'"
+alias unbind="su -c '/home/shaybox/.scripts/unbind.sh &'"
+alias rebind="su -c '/home/shaybox/.scripts/rebind.sh &'"
+alias flash="su -c '/home/shaybox/.scripts/flash.sh &'"
 
 # dotfiles
 alias dotfiles="git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME"
