@@ -3,7 +3,7 @@ export EDITOR=nano
 export VISUAL=nano
 
 # GOPATH
-export GOPATH=~/Documents/Workspace/Go
+export GOPATH=~/Documents/Go
 
 # PATH
 export PATH=$PATH:~/.bin:~/.npm-global/bin:$GOPATH/bin

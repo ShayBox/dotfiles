@@ -3,7 +3,7 @@
     "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.tabSize": 2,
     "explorer.openEditors.visible": 0,
-    "workbench.colorTheme": "FlatUI Dark",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "workbench.list.openMode": "doubleClick",
@@ -18,7 +18,6 @@
     "npm.autoDetect": "off",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "explorer.confirmDragAndDrop": false,
-    "editor.multiCursorModifier": "ctrlCmd",
     "typescript.extension.sortImports.enableJavascript": true,
     "typescript.extension.sortImports.maxNamedImportsInSingleLine": 100,
     "git.enableSmartCommit": true,
@@ -27,10 +26,14 @@
     "files.exclude": {
         "**/.directory": true,
         "**/.gitignore": true,
+        "**/.vscode": true,
         "**/LICENSE": true,
         "**/node_modules": true
     },
     "window.zoomLevel": 0,
     "editor.fontSize": 16,
-    "window.menuBarVisibility": "default"
+    "window.menuBarVisibility": "default",
+    "window.titleBarStyle": "custom",
+    "workbench.list.multiSelectModifier": "alt",
+    "editor.multiCursorModifier": "ctrlCmd"
 }
