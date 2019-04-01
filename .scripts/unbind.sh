@@ -17,8 +17,8 @@ echo efi-framebuffer.0 > /sys/bus/platform/drivers/efi-framebuffer/unbind || ech
 sleep 1
 
 # Unbind the GPU from display driver
-echo '0000:42:00.0' > /sys/bus/pci/devices/0000:42:00.0/driver/unbind || echo "Failed to unbind from nvidia"
-echo '0000:42:00.1' > /sys/bus/pci/devices/0000:42:00.1/driver/unbind || echo "Failed to unbind from nvidia"
+echo '0000:0a:00.0' > /sys/bus/pci/devices/0000:0a:00.0/driver/unbind || echo "Failed to unbind from nvidia"
+echo '0000:0a:00.1' > /sys/bus/pci/devices/0000:0a:00.1/driver/unbind || echo "Failed to unbind from nvidia"
 
 sleep 1
 
