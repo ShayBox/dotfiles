@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 # Monitor settings
 bspc monitor DP-0 -d 1 2 3 4 5 6
@@ -22,27 +22,32 @@ bspc rule -a Flashplayer state=tiled
 # Hotkey Daemon
 sxhkd &
 
-# Bar
-~/.config/polybar/launch.sh
-
-# Wallpaper
-feh --bg-scale ~/Pictures/Wallpapers/Wallpaper.jpg
-
 # Disable CapsLock
 xmodmap ~/.Xmodmap
-
-# Compositor
-compton -b
 
 # Fix Cusor On Desktop
 xsetroot -cursor_name left_ptr
 
-# Notifications
-dunst &
-
 # Keyboard Colors/Macros
 g910-led -a 0000FF
 g910-led -gkm 1
+
+# Bar
+~/.config/polybar/launch.sh
+
+# Wallpaper
+urlpath=$( \
+curl "https://www.bing.com/HPImageArchive.aspx?format=rss&idx=0&n=1&mkt=en-US" \
+| xmllint --xpath "/rss/channel/item/link/text()" - \
+| sed 's/1366x768/1920x1080/g' \
+)
+curl "https://www.bing.com$urlpath" | feh --bg-fill -
+
+# Compositor
+compton -b
+
+# Notifications
+dunst &
 
 # Programs
 discord &

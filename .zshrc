@@ -81,23 +81,22 @@ alias vi="nvim"
 alias vim="nvim"
 
 # SSH shortcuts
-alias bots="ssh shay@bots"
 alias server="ssh server"
-alias xserver="ssh -X server"
-alias xdmcp="sh -c 'Xephyr -query server -screen 1920x1021 -br -reset -terminate :1 &' && exit"
+alias tablet="ssh tablet"
 alias pi="ssh pi@pi"
+alias bots="ssh shay@bots"
 alias terraria="ssh shay@server.nomsy.net"
 
 # Flipping
-alias flipping="./.scripts/flipping.sh"
+alias flipping=nvidia-settings -a AllowFlipping=0
 
 # Proxy
-alias proxy="sshuttle --dns -r shay@bots 0/0"
+alias proxy1="sshuttle --dns -r shay@bots 0/0"
+alias proxy2="sshuttle --dns -r shay@server.nomsy.net 0/0"
 
 # VMs
 alias unbind="su -c '/home/shaybox/.scripts/unbind.sh &'"
 alias rebind="su -c '/home/shaybox/.scripts/rebind.sh &'"
-alias flash="su -c '/home/shaybox/.scripts/flash.sh &'"
 
 # dotfiles
 alias dotfiles="git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME"
