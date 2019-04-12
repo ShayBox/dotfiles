@@ -22,6 +22,5 @@ then
 	export _JAVA_AWT_WM_NONREPARENTING=1
 
 	# QT Theme
-	export QT_QPA_PLATFORMTHEME=lxqt
-	export QT_STYLE_OVERRIDE=kvantum
+	export QT_QPA_PLATFORMTHEME=qt5ct
 fi
