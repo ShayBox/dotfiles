@@ -7,8 +7,11 @@ export VISUAL=nano
 # GOPATH
 export GOPATH=~/Documents/Go
 
+# DOTNET_ROOT
+export DOTNET_ROOT=/opt/dotnet
+
 # PATH
-export PATH=$PATH:~/.bin:~/.npm-global/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/.bin:$HOME/.npm-global/bin:$GOPATH/bin:$HOME/.dotnet/tools
 
 # Disable root messages
 export ZSH_DISABLE_COMPFIX=true

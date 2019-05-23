@@ -5,16 +5,6 @@
     "command": "editor.action.sortLinesAscending"
   },
   {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "-editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "shift+f10",
     "command": "workbench.action.tasks.terminate"
   },
@@ -41,5 +31,20 @@
     "key": "ctrl+shift+alt+up",
     "command": "-editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
   }
 ]

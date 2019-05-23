@@ -1,5 +1,5 @@
 [options]
-font = Inconsolata 12
+font = Inconsolata 10
 
 # "block", "underline" or "ibeam"
 cursor_shape = ibeam
@@ -10,11 +10,11 @@ cursor_shape = ibeam
 foreground      = #f8f8f8
 foreground_bold = #f8f8f8
 cursor          = #f8f8f8
-background      = #282828
+background      = rgba(40, 40, 40, 0.90)
 
 # black
 color0  = #171717
-color8  = #38252c
+color8  = #474747
 
 # red
 color1  = #d81765

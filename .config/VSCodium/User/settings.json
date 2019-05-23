@@ -4,7 +4,6 @@
     },
     "editor.fontFamily": "'PragmataPro', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
     "eslint.autoFixOnSave": true,
@@ -36,4 +35,8 @@
     "workbench.list.openMode": "doubleClick",
     "workbench.startupEditor": "none",
     "workbench.statusBar.feedback.visible": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontSize": 16,
+    "editor.smoothScrolling": true,
+    "editor.scrollBeyondLastLine": false,
 }

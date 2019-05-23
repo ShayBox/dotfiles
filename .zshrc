@@ -88,7 +88,7 @@ alias bots="ssh shay@bots"
 alias terraria="ssh shay@server.nomsy.net"
 
 # Flipping
-alias flipping=nvidia-settings -a AllowFlipping=0
+alias flipping="nvidia-settings -a AllowFlipping=0"
 
 # Proxy
 alias proxy1="sshuttle --dns -r shay@bots 0/0"
@@ -111,6 +111,9 @@ rconvert() {
 
 # Make .SRCINFO
 alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
+
+# Update Grub
+alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 ## End Arch
 
