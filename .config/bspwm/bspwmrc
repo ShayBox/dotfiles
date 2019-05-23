@@ -9,11 +9,13 @@ bspc config border_width 0
 bspc config window_gap 0
 bspc config bottom_padding 27
 bspc config split_ratio 0.50
+#bspc config normal_border_color "#4a4a4a"
+#bspc config focused_border_color "#bcecff"
 
 # Window rules
 bspc rule -a '*' monitor=DP-0
 bspc rule -a Firefox desktop=^1
-bspc rule -a discord desktop=^7
+bspc rule -a discord desktop=^7 state=fullscreen
 bspc rule -a obs desktop=^8
 bspc rule -a Flashplayer state=tiled
 
@@ -29,19 +31,25 @@ xmodmap ~/.Xmodmap
 xsetroot -cursor_name left_ptr
 
 # Keyboard Colors/Macros
-g910-led -a 0000FF
+g910-led -a bcecff
 g910-led -gkm 1
+
+# Mouse
+#solaar &
 
 # Bar
 ~/.config/polybar/launch.sh
 
 # Wallpaper
-urlpath=$( \
-curl "https://www.bing.com/HPImageArchive.aspx?format=rss&idx=0&n=1&mkt=en-US" \
-| xmllint --xpath "/rss/channel/item/link/text()" - \
-| sed 's/1366x768/1920x1080/g' \
-)
-curl "https://www.bing.com$urlpath" | feh --bg-fill -
+#urlpath=$( \
+#curl "https://www.bing.com/HPImageArchive.aspx?format=rss&idx=0&n=1&mkt=en-US" \
+#| xmllint --xpath "/rss/channel/item/link/text()" - \
+#| sed 's/1366x768/1920x1080/g' \
+#)
+#curl "https://www.bing.com$urlpath" | feh --bg-fill -
+
+# Wallpaper 2
+feh --bg-scale Pictures/Wallpapers/Misc/claire-brear-452674-unsplash.jpg
 
 # Compositor
 compton -b

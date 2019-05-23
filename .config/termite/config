@@ -7,39 +7,39 @@ cursor_shape = ibeam
 [colors]
 
 # special
-foreground      = #f8f8f8
-foreground_bold = #f8f8f8
-cursor          = #f8f8f8
-background      = rgba(40, 40, 40, 0.90)
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #1a1a1a
 
 # black
-color0  = #171717
-color8  = #474747
+color0  = #1a1a1a
+color8  = #4a4a4a
 
 # red
-color1  = #d81765
-color9  = #ff0000
+color1  = #ff5370
+color9  = #ff5370
 
 # green
-color2  = #97d01a
-color10 = #76b639
+color2  = #c3e88d
+color10 = #c3e88d
 
 # yellow
-color3  = #ffa800
-color11 = #e1a126
+color3  = #ffcb6b
+color11 = #ffcb6b
 
 # blue
-color4  = #0fdcb6
-color12 = #0a9b81
+color4  = #82aaff
+color12 = #82aaff
 
 # magenta
-color5  = #ff2491
-color13 = #ff2491
+color5  = #c792ea
+color13 = #c792ea
 
 # cyan
-color6  = #16b1fb
-color14 = #289cd5
+color6  = #89ddff
+color14 = #89ddff
 
 # white
-color7  = #ebebeb
-color15 = #f8f8f8
+color7  = #cccccc
+color15 = #ffffff
