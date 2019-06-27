@@ -68,31 +68,27 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-## General
-
 # Autocomplete command flags
 autoload -U compinit && compinit
 
 # Replace ls
 alias ls=exa
 
-# Editor
+# Editors
 alias vi="nvim"
 alias vim="nvim"
 
 # SSH shortcuts
+alias yukine="ssh shay@yukine"
 alias server="ssh server"
-alias tablet="ssh tablet"
-alias pi="ssh pi@pi"
-alias bots="ssh shay@bots"
-alias terraria="ssh shay@server.nomsy.net"
+
+# Proxy
+alias proxy="sshuttle --dns -r shaybox@server 0/0"
+alias proxy1="sshuttle --dns -r shay@yukine 0/0"
+alias proxy2="sshuttle --dns -r shay@nomsy 0/0"
 
 # Flipping
 alias flipping="nvidia-settings -a AllowFlipping=0"
-
-# Proxy
-alias proxy1="sshuttle --dns -r shay@bots 0/0"
-alias proxy2="sshuttle --dns -r shay@server.nomsy.net 0/0"
 
 # VMs
 alias unbind="su -c '/home/shaybox/.scripts/unbind.sh &'"
@@ -106,16 +102,14 @@ rconvert() {
 	ffmpeg-bar -y -i "$1" -c:v libxvid -c:v mpeg4 -force_key_frames "expr:gte(t,n_forced*1)" -b:v 250000k -c:a pcm_s16le "${1%%.*}.mov"
 }
 
-## End General
-## Arch
-
 # Make .SRCINFO
 alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
 
 # Update Grub
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-## End Arch
+# Steam account switcher
+alias steam="sh ~/.scripts/steam.sh $1"
 
 neofetch
 ls

@@ -2,7 +2,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.tslint": true
     },
-    "editor.fontFamily": "'PragmataPro', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Operator Mono', 'PragmataPro', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
@@ -11,11 +11,14 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
     "files.exclude": {
-        "**/.directory": true,
-        "**/.gitignore": true,
-        "**/.vscode": true,
-        "**/LICENSE": true,
-        "**/node_modules": true
+        "**/.*": true,
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CNAME": true,
+        "**/CVS": false,
+        "**/LICENSE": true
     },
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -39,4 +42,6 @@
     "editor.fontSize": 16,
     "editor.smoothScrolling": true,
     "editor.scrollBeyondLastLine": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "terminal.integrated.fontWeightBold": "normal",
 }
