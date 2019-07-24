@@ -74,18 +74,17 @@ autoload -U compinit && compinit
 # Replace ls
 alias ls=exa
 
+# Paste
+alias tb="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
+
 # Editors
 alias vi="nvim"
 alias vim="nvim"
 
 # SSH shortcuts
-alias yukine="ssh shay@yukine"
+alias yukine="ssh shay@193.31.27.18"
+alias nomsy="ssh shay@server.nomsy.net"
 alias server="ssh server"
-
-# Proxy
-alias proxy="sshuttle --dns -r shaybox@server 0/0"
-alias proxy1="sshuttle --dns -r shay@yukine 0/0"
-alias proxy2="sshuttle --dns -r shay@nomsy 0/0"
 
 # Flipping
 alias flipping="nvidia-settings -a AllowFlipping=0"
