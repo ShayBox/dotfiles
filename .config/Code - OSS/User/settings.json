@@ -2,7 +2,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.tslint": true
     },
-    "editor.fontFamily": "'Operator Mono', 'Fira Code'",
+    "editor.fontFamily": "'Lotion', 'Operator Mono', 'Fira Code'",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
@@ -45,10 +45,10 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "update.mode": "none",
     "window.menuBarVisibility": "default",
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0,
     "workbench.list.openMode": "doubleClick",
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "window.customMenuBarAltFocus": false,
+    "vsicons.dontShowNewVersionMessage": true,
 }

@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Monitor settings
-bspc monitor DP-0 -d 1 2 3 4 5 6
+bspc monitor DP-0   -d 1 2 3
+bspc monitor DP-2   -d 4 5 6
 bspc monitor HDMI-0 -d 7 8 9
 
 # Window settings
@@ -14,10 +15,11 @@ bspc config split_ratio 0.50
 
 # Window rules
 bspc rule -a '*' monitor=DP-0
-bspc rule -a Firefox desktop=^1
-bspc rule -a discord desktop=^7 state=fullscreen
-bspc rule -a obs desktop=^8
-bspc rule -a Flashplayer state=tiled
+bspc rule -a firefox desktop=^1
+bspc rule -a discord monitor=DP-2 state=fullscreen
+bspc rule -a obs desktop=^7
+bspc rule -a flashplayer state=tiled
+bspc rule -a yakuake state=floating
 
 ## Startup
 
@@ -31,25 +33,14 @@ xmodmap ~/.Xmodmap
 xsetroot -cursor_name left_ptr
 
 # Keyboard Colors/Macros
-g910-led -a bcecff
+g910-led -a 00FFFF
 g910-led -gkm 1
-
-# Mouse
-#solaar &
 
 # Bar
 ~/.config/polybar/launch.sh
 
 # Wallpaper
-#urlpath=$( \
-#curl "https://www.bing.com/HPImageArchive.aspx?format=rss&idx=0&n=1&mkt=en-US" \
-#| xmllint --xpath "/rss/channel/item/link/text()" - \
-#| sed 's/1366x768/1920x1080/g' \
-#)
-#curl "https://www.bing.com$urlpath" | feh --bg-fill -
-
-# Wallpaper 2
-feh --bg-scale Pictures/Wallpapers/Misc/claire-brear-452674-unsplash.jpg
+feh --bg-scale Pictures/Wallpapers/Misc/Flower.jpg
 
 # Compositor
 compton -b
@@ -58,4 +49,5 @@ compton -b
 dunst &
 
 # Programs
-discord &
+discord-canary &
+yakuake &

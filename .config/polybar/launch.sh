@@ -8,4 +8,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
 polybar primary &
-polybar secondary &
+polybar secondary-left &
+polybar secondary-right &

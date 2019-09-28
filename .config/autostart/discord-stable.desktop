@@ -1,8 +1,0 @@
-[Desktop Entry]
-Comment=Text and voice chat for gamers.
-Exec=/opt/discord/Discord
-Icon=/opt/discord/discord.png
-Name=Discord
-NoDisplay=false
-Type=Application
-X-GNOME-Autostart-enabled=true

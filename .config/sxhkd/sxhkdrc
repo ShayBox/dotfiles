@@ -1,3 +1,11 @@
+# Exit BSPWM
+ctrl + alt + Delete
+	bspc quit
+
+# Reload SXHKD
+super + Escape
+	pkill -USR1 -x sxhkd
+
 # Browser
 super + 1
 	firefox
@@ -5,10 +13,6 @@ super + 1
 # File Manager
 super + 2
 	dolphin
-
-# Exit WM
-ctrl + alt + Delete
-	bspc quit
 
 # Screenshot
 Print
@@ -21,10 +25,6 @@ super + Return
 # Launcher
 super + d
 	rofi -show drun
-
-# Reload SXHKD
-super + Escape
-	pkill -USR1 -x sxhkd
 
 # Quit Program
 super + shift + q
@@ -44,7 +44,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # Move Window To Workspace
 super + shift + KP_{1-9}
-	bspc node -d '^{1-9,10}'
+	bspc node -d {1-9}
 
 # Move Focus To Workspace
 super + ctrl + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
@@ -55,10 +55,6 @@ super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 super + alt + shift + {Left,Dow,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# Move Focus
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Play
 XF86AudioPlay
@@ -87,11 +83,3 @@ XF86AudioLowerVolume
 # Mute
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-# Decrease Brightness
-super + XF86AudioLowerVolume
-	~/.scripts/brightness.sh - DP-0
-
-# Increase Brightness
-super + XF86AudioRaiseVolume
-	~/.scripts/brightness.sh + DP-0

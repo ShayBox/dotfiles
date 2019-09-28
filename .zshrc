@@ -81,11 +81,6 @@ alias tb="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
 alias vi="nvim"
 alias vim="nvim"
 
-# SSH shortcuts
-alias yukine="ssh shay@193.31.27.18"
-alias nomsy="ssh shay@server.nomsy.net"
-alias server="ssh server"
-
 # Flipping
 alias flipping="nvidia-settings -a AllowFlipping=0"
 
