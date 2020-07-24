@@ -1,0 +1,8 @@
+#!/bin/bash
+
+xrandr --output DP-2   --mode 1920x1080 --rate 144 --primary
+xrandr --output DVI-D-0 --mode 1366x768  --right-of DP-2
+xrandr --output DP-0   --mode 1368x768 --left-of DP-2
+xrandr --output DP-0   --mode 1366x768 --left-of DP-2
+
+nvidia-settings -a AllowFlipping=0

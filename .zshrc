@@ -1,10 +1,13 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/shaybox/.oh-my-zsh"
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 DEFAULT_USER="shaybox"
 
@@ -22,10 +25,16 @@ DEFAULT_USER="shaybox"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -60,50 +69,69 @@ DEFAULT_USER="shaybox"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+export ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]
+then
+    mkdir $ZSH_CACHE_DIR
+fi
+
 # User configuration
 
-# Autocomplete command flags
-autoload -U compinit && compinit
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# Replace ls
-alias ls=exa
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# Paste
-alias tb="(exec 3<>/dev/tcp/termbin.com/9999; cat >&3; cat <&3; exec 3<&-)"
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# Editors
-alias vi="nvim"
-alias vim="nvim"
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# Flipping
-alias flipping="nvidia-settings -a AllowFlipping=0"
-
-# VMs
-alias unbind="su -c '/home/shaybox/.scripts/unbind.sh &'"
-alias rebind="su -c '/home/shaybox/.scripts/rebind.sh &'"
-
-# dotfiles
-alias dotfiles="git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME"
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Convert to davinci-resolve compatable file
 rconvert() {
 	ffmpeg-bar -y -i "$1" -c:v libxvid -c:v mpeg4 -force_key_frames "expr:gte(t,n_forced*1)" -b:v 250000k -c:a pcm_s16le "${1%%.*}.mov"
 }
 
-# Make .SRCINFO
+signkey() {
+	sudo pacman-key --recv-keys "$1"
+	sudo pacman-key --finger "$1"
+	sudo pacman-key --lsign-key "$1"
+}
+
+# Aliases
+alias ls=exa
+alias flipping="nvidia-settings -a AllowFlipping=0 && exit"
+alias unbind="su -c '/home/shaybox/.scripts/unbind.sh &'"
+alias rebind="su -c '/home/shaybox/.scripts/rebind.sh &'"
+alias dotfiles="git --git-dir=$HOME/Documents/dotfiles/ --work-tree=$HOME"
 alias mksrcinfo="makepkg --printsrcinfo > .SRCINFO"
-
-# Update Grub
+alias gobuild="gox --output=$HOME/Downloads/{{.Dir}}_{{.OS}}_{{.Arch}}"
+alias yay="yay --pacman powerpill"
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias fuck="tmux new-session 'kwin_x11 --replace'"
+alias ungrab="xdotool key XF86Ungrab"
+alias ee="code $XDG_CONFIG_HOME/espanso/default.yml"
+alias er="espanso restart"
+alias rpi="ssh 192.168.0.26"
+alias vps="ssh shaybox.com"
 
-# Steam account switcher
-alias steam="sh ~/.scripts/steam.sh $1"
-
-neofetch
-ls
+# MOTD
+clear && neofetch && ls

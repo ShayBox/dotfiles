@@ -1,0 +1,1 @@
+/home/shaybox/.scripts/monitors.sh

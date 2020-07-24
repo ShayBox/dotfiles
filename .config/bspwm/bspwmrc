@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Monitor settings
-bspc monitor DP-0   -d 1 2 3
-bspc monitor DP-2   -d 4 5 6
+bspc monitor DP-2   -d 1 2 3
+bspc monitor DP-0   -d 4 5 6
 bspc monitor HDMI-0 -d 7 8 9
 
 # Window settings
@@ -14,12 +14,12 @@ bspc config split_ratio 0.50
 #bspc config focused_border_color "#bcecff"
 
 # Window rules
-bspc rule -a '*' monitor=DP-0
-bspc rule -a firefox desktop=^1
-bspc rule -a discord monitor=DP-2 state=fullscreen
-bspc rule -a obs desktop=^7
+bspc rule -a '*'         monitor=DP-0
+bspc rule -a firefox     monitor=DP-0
+bspc rule -a discord     monitor=DP-2
+bspc rule -a obs         monitor=HDMI-0
 bspc rule -a flashplayer state=tiled
-bspc rule -a yakuake state=floating
+bspc rule -a yakuake     state=floating
 
 ## Startup
 

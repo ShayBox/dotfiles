@@ -1,0 +1,21 @@
+echo "Deleting device tap-easytether"
+nmcli d del tap-easytether
+
+echo "Deleting connection EasyTether"
+nmcli c del EasyTether
+
+echo "Running easytether"
+#sudo easytether-bluetooth D8:0B:9A:05:D8:6B
+sudo easytether-usb
+
+echo "Setting tap-easytether as managed"
+nmcli d set tap-easytether managed yes
+
+echo "Creating connection EasyTether"
+nmcli c add ifname tap-easytether con-name EasyTether type tun mode tap ip4 192.168.117.2 gw4 192.168.117.1
+
+echo "Bringing EasyTether up"
+nmcli c up EasyTether
+
+echo "Setting tap-easytether dns"
+nmcli d mod tap-easytether +ipv4.dns 8.8.8.8
